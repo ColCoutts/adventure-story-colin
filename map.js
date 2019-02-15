@@ -1,7 +1,7 @@
 const questList = document.getElementById('quest-list');
 
 const questType = [
-    'ThunderDome',
+    'thunderdome',
     'Yeti Resort'
 ];
 
