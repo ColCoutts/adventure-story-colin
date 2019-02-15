@@ -7,3 +7,4 @@ const thunderDomeOptions = [
         gold: //gold amount
     }
 ]
+
