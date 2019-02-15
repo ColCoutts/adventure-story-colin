@@ -11,13 +11,31 @@ const searchParams = new URLSearchParams(window.location.search);
 const questUrl = searchParams.get('questOptions');
 console.log(questUrl);
 
+let questOptions = null;
+
 for(let i = 0; i < questList.length; i++){
     const currentQuest = questList[i];
+    console.log(currentQuest);
 
     if(currentQuest.id === questUrl){
         title.textContent = currentQuest.title;
         description.textContent = currentQuest.description;
-
+        pageTitle.textContent = currentQuest.title;
+        image.src = currentQuest.image;
+        questOptions = currentQuest.options;
+    }
+    //create ze buttons
+    for(let i = 0; i < questOptions.length; i++) {
+        const span = document.createElement('span');
+        const label = document.createElement('label');
+        span.textContent = questOptions[i].description;
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.value = questOptions[i].result;
+        radio.name = questOptions[i].options;
+        label.appendChild(radio);
+        label.appendChild(span);
+        options.appendChild(label);
     }
 
 }
@@ -27,5 +45,13 @@ for(let i = 0; i < questList.length; i++){
 form.addEventListener('submit', function(event){
     event.preventDefault;
 
+    const formData = new FormData(form);
+    const result = formData.get(options);
 
-})
+    form.remove();
+
+    description.textContent = result;
+
+
+
+});

@@ -3,21 +3,24 @@ const thunderDomeOptions = [
     {
         id: 'fight',
         title: 'fight',
-        description: 'You fought it',
+        description: 'You try to fight it',
+        result: 'you fought the thing!',
         hp: -15,
         gold: 20
     },
     {
         id: 'trick',
         title: 'trick',
-        description: 'You tricked it',
+        description: 'You try to trick it',
+        result: 'you tricked it!',
         hp: 5,
         gold: 30
     },
     {
         id: 'evade',
         title: 'evade',
-        description: 'You evaded it',
+        description: 'You try to evade it',
+        result: 'you evaded it!',
         hp: -30,
         gold: 0
     }
