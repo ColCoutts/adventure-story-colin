@@ -53,6 +53,10 @@ form.addEventListener('submit', function(event){
 
         if(currentOptionId === optionId) {
             description.textContent = questOptions[i].result;
+            userProfile.scoreDaddy[optionId]++;
+            userProfile.hp += questOptions[i].hp;
+            userProfile.gold += questOptions[i].gold;
+            
 
     
         }
