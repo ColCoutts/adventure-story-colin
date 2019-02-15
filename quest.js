@@ -46,7 +46,17 @@ form.addEventListener('submit', function(event){
     event.preventDefault;
 
     const formData = new FormData(form);
-    const result = formData.get(options);
+    const optionId = formData.get(options);
+
+    for(let i = 0; i < questOptions.length; i++) {
+        const currentOptionId = questOptions[i].id;
+
+        if(currentOptionId === optionId) {
+            description.textContent = questOptions[i].result;
+
+    
+        }
+    }
 
     form.remove();
 
