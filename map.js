@@ -1,5 +1,10 @@
 const questList = document.getElementById('quest-list');
 
+const userProfileDisplay = document.getElementById('user-profile-display');
+const json = window.localStorage.getItem('userProfile');
+const userProfile = JSON.parse(json);
+userProfileDisplay.textContent = userProfile.name + ' has a health of ' + userProfile.hp + ' and a purse of ' + userProfile.gold;
+
 const questType = [
     'thunderdome',
     'Yeti Resort'

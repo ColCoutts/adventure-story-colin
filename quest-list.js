@@ -25,7 +25,7 @@ const thunderDomeOptions = [
         gold: 0
     }
 ];
-// 
+
 const thunderDomeQuest = {
     id: 'thunderdome',
     title: 'Enter the Thunder Dome',
@@ -35,7 +35,7 @@ const thunderDomeQuest = {
 };
 
 const questList = [
-    thunderDomeQuest
+    thunderDomeQuest, 'string'
 ];
 
 export default questList;
