@@ -50,6 +50,7 @@ form.addEventListener('submit', function(event) {
 
     const formData = new FormData(form);
     const optionId = formData.get('options');
+    //optionID is NOT taking the specific ID of the radio button causing the if conditional on line 60 not work!
     console.log(optionId);
 
     for(let i = 0; i < questOptions.length; i++) {

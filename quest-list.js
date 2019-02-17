@@ -35,7 +35,7 @@ const thunderDomeQuest = {
 };
 
 const questList = [
-    thunderDomeQuest, 'string'
+    thunderDomeQuest
 ];
 
 export default questList;
