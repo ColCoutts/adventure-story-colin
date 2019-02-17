@@ -1,5 +1,5 @@
 import questList from './quest-list.js';
-import displayInfo from './user-display.js'
+import displayInfo from './user-display.js';
 
 displayInfo();
 
@@ -12,13 +12,13 @@ const description = document.getElementById('description');
 
 const searchParams = new URLSearchParams(window.location.search);
 const questUrl = searchParams.get('questOptions');
-console.log(questUrl);
+console.log(questUrl); //thunderdome from the questType array in map.js called 'thunderdome'
 
 let questOptions = null;
 
 for(let i = 0; i < questList.length; i++){
     const currentQuest = questList[i];
-
+    console.log(currentQuest);
     if(currentQuest.id === questUrl){
         title.textContent = currentQuest.title;
         description.textContent = currentQuest.description;
@@ -32,8 +32,8 @@ for(let i = 0; i < questList.length; i++){
             span.textContent = questOptions[i].description;
             const radio = document.createElement('input');
             radio.type = 'radio';
-            radio.value = questOptions[i].result;
-            radio.name = questOptions[i].options;
+            radio.value = questOptions[i].id;
+            radio.name = 'options';
             label.appendChild(radio);
             label.appendChild(span);
             options.appendChild(label);

@@ -16,6 +16,7 @@ for(let i = 0; i < questType.length; i++) {
     const a = document.createElement('a');
     a.href = './quest.html?questOptions=' + encodeURIComponent(questOptions);
     a.textContent = questOptions;
+    console.log(a.textContent);
     a.classList.add('quest-link');
     questList.appendChild(a);
 }
